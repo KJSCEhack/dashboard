@@ -243,11 +243,11 @@ schema.methods.checkPassword = function(password) {
 
 // Token stuff
 schema.methods.generateEmailVerificationToken = function(){
-  return jwt.sign(this.email, JWT_SECRET);
+  return jwt.sign(this.email.toJSON(), JWT_SECRET);
 };
 
 schema.methods.generateAuthToken = function(){
-  return jwt.sign(this._id, JWT_SECRET);
+  return jwt.sign(this._id.toJSON(), JWT_SECRET);
 };
 
 /**
@@ -261,7 +261,7 @@ schema.methods.generateAuthToken = function(){
  */
 schema.methods.generateTempAuthToken = function(){
   return jwt.sign({
-    id: this._id
+    id: this._id.toJSON()
   }, JWT_SECRET, {
     expiresInMinutes: 60,
   });
