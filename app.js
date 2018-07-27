@@ -44,6 +44,6 @@ app.use('/auth', authRouter);
 require('./app/server/routes')(app);
 
 // listen (start app with node server.js) ======================================
-app.listen(port);
+app.listen(process.env.PORT || 5000);
 console.log("App listening on port " + port);
 
