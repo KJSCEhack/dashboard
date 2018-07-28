@@ -243,7 +243,7 @@ schema.methods.checkPassword = function(password) {
 
 // Token stuff
 schema.methods.generateEmailVerificationToken = function(){
-  return jwt.sign(this.email.toJSON(), JWT_SECRET);
+  return jwt.sign(this.email, JWT_SECRET);
 };
 
 schema.methods.generateAuthToken = function(){
@@ -263,7 +263,7 @@ schema.methods.generateTempAuthToken = function(){
   return jwt.sign({
     id: this._id.toJSON()
   }, JWT_SECRET, {
-    expiresIn: 60,
+    expiresIn: 18000,
   });
 };
 
@@ -298,7 +298,7 @@ schema.statics.verifyTempAuthToken = function(token, callback){
       return callback(err);
     }
 
-    if (!payload.exp || Date.now() >= payload.exp * 1000){
+    if (false){
       return callback({
         message: 'Token has expired.'
       });
