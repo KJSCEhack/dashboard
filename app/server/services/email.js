@@ -3,7 +3,7 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
 var templatesDir = path.join(__dirname, '../templates');
-var emailTemplates = require('email-templates');
+const emailTemplates = require('email-templates');
 
 var ROOT_URL = process.env.ROOT_URL;
 
@@ -39,12 +39,11 @@ var controller = {};
 controller.transporter = transporter;
 
 function sendOne(templateName, options, data, callback){
-
   if (NODE_ENV === "dev") {
     console.log(templateName);
     console.log(JSON.stringify(data, "", 2));
   }
-
+  console.log('HEYEYWY)(');
   emailTemplates(templatesDir, function(err, template){
     if (err) {
       return callback(err);
