@@ -110,7 +110,7 @@ Contributions to Quill are welcome and appreciated! Please take a look at [`CONT
 If you have any questions about this software, please contact [quill@hackmit.org][email].
 
 # License
-Copyright (c) 2015-2016 Edwin Zhang (https://github.com/ehzhang). Released under AGPLv3. See [`LICENSE.txt`][license] for details.
+Copyright (c) 2015-2018 Edwin Zhang (https://github.com/ehzhang). Released under AGPLv3. See [`LICENSE.txt`][license] for details.
 
 [contribute]: https://github.com/techx/quill/blob/master/CONTRIBUTING.md
 [license]: https://github.com/techx/quill/blob/master/LICENSE.txt

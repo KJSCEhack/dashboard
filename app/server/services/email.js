@@ -43,7 +43,6 @@ function sendOne(templateName, options, data, callback){
     console.log(templateName);
     console.log(JSON.stringify(data, "", 2));
   }
-  console.log('HEYEYWY)(');
   emailTemplates(templatesDir, function(err, template){
     if (err) {
       return callback(err);
