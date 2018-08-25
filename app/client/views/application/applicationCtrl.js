@@ -200,6 +200,14 @@ angular.module('reg')
                   prompt: 'Please add a valid link of your Github profile'
                 }
               ]
+            },essay: {
+              identifier: 'essay',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please write an essay :P'
+                }
+              ]
             },
             signatureCodeOfConduct: {
               identifier: 'signatureCodeOfConduct',

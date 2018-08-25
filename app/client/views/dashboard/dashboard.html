@@ -65,7 +65,7 @@
           <strong>
             Registration Deadline:
           </strong>
-          {{ timeClose }}
+          {{ timeClose }} )
         </div>
 
         <div
@@ -215,7 +215,7 @@
           class="description"
           ng-if="dashState('confirmed')">
 
-          <div
+          <!-- <div
             ng-show="!pastConfirmation"
             class="markdown">
             <h4>
@@ -231,7 +231,7 @@
           <div class="ui purple button"
                ui-sref="app.profile">
             {{pastConfirmation ? 'View' : 'Edit'}} your confirmation information
-          </div>
+          </div> -->
 
           <div class="ui red button"
                ng-click="declineAdmission()">

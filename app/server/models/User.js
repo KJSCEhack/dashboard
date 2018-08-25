@@ -57,7 +57,7 @@ var profile = {
   github: String,
   twitter: String,
   website: String,
-  resume: String,
+  resume_link: String,
 
   hostNeededFri: Boolean,
   hostNeededSat: Boolean,

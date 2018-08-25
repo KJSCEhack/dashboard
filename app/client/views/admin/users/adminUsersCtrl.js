@@ -211,8 +211,12 @@ angular.module('reg')
                 value: user.profile.github
               },{
                 name: 'Website',
-                value: user.profile.website
+                value: user.profile.twitter
               },{
+                name: 'Resume Link',
+                value: user.profile.resume_link
+              },
+              {
                 name: 'Additional Notes',
                 value: user.profile.notes
               }
