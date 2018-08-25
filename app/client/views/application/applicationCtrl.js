@@ -152,7 +152,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  prompt: 'You must be an adult, or an KJSCE student.'
                 }
               ]
             },
@@ -162,6 +162,42 @@ angular.module('reg')
                 {
                   type: 'empty',
                   prompt: 'Please enter a phone number.'
+                }
+              ]
+            },
+            resume_link: {
+              identifier: 'resume_link',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please add a valid link of your resume'
+                }
+              ]
+            },
+            descrip: {
+              identifier: 'descrip',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a description'
+                }
+              ]
+            },
+            twitter: {
+              identifier: 'twitter',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a valid link of your LinkedIn or Personal Website'
+                }
+              ]
+            },
+            github: {
+              identifier: 'github',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please add a valid link of your Github profile'
                 }
               ]
             },

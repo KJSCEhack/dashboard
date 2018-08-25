@@ -21,26 +21,26 @@
         </div>
 
         <div class="field">
-          <label> Full Name </label>
+          <label> Full Name  *</label>
           <input type="text"
                  name="name"
                  ng-model="user.profile.name">
         </div>
 
         <div class="field">
-          <label> What's your phone number? (required) </label>
+          <label> What's your phone number?  *</label>
           <p>
-            We need this in case we need to get ahold of you!
+            We'll be adding you to a WhatsApp group for further instructions 😛
           </p>
           <input type="tel"
                  name="phone"
                  ng-model="user.profile.phoneNumber"
-                 placeholder="(+91) - 555 - 1234"
+                 placeholder="(+91) - 12345 9876"
                  required>
         </div>
 
         <div class="field" ng-show="autoFilledSchool">
-          <label> School </label>
+          <label> School  *</label>
           <input class="ui input"
                  disabled="disabled"
                  ng-show="autoFilledSchool"
@@ -48,7 +48,7 @@
         </div>
 
         <div class="field" ng-show="!autoFilledSchool">
-          <label> School </label>
+          <label> School   *</label>
           <div id="school" class="ui search">
             <div class="ui input">
               <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
@@ -58,7 +58,7 @@
         </div>
 
         <div class="field">
-          <label>Graduation Year</label>
+          <label>Graduation Year  *</label>
           <select
             name="year"
             ng-model="user.profile.graduationYear">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="field">
-          <label>Gender</label>
+          <label>Gender  *</label>
           <select
             name="gender"
             ng-model="user.profile.gender">
@@ -83,15 +83,16 @@
         </div>
 
         <div class="field">
-          <label>I would describe myself as a...</label>
+          <label>I would describe myself as a...  *</label>
           <input type="text"
+                  name="descrip"
                  placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
                  ng-model="user.profile.description">
         </div>
         <div class="divided title"> Skills & Accomplishments </div>
 
         <div class="field">
-          <label> What are you studying? </label>
+          <label> What are you studying?  *</label>
           <input type="text"
                  name="study"
                  placeholder="Computer Science, Electronics , etc."
@@ -99,7 +100,7 @@
         </div>
 
         <div class="field">
-          <label> Github </label>
+          <label> Github  *</label>
           <input type="text"
                  name="github"
                  placeholder="https://github.com/foobar"
@@ -107,21 +108,21 @@
         </div>
 
         <div class="field">
-          <label> Twitter </label>
+          <label> Personal Website / LinkedIn * </label>
           <input type="text"
                  name="twitter"
-                 placeholder="https://twitter.com/foobar"
+                 placeholder="https://linkedin.com/foobar"
                  ng-model="user.profile.twitter">
         </div>
 
         <div class="field">
-          <label> Skill Sheet (required) </label>
+          <label> Skill Sheet  *</label>
           <p>
-            Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
+            Upload a document link outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
           </p>
           <input type="text"
-                 name="twitter"
-                 placeholder="Google Drive Link"
+                 name="resume_link"
+                 placeholder="Google Drive Link or any other"
                  ng-model="user.profile.resume">
         </div>
 
@@ -132,7 +133,7 @@
         
         <div class="field">
           <label>
-              What would you like to learn or get out of KJSCE Hackathon 2018? (optional)
+            Why do you want to attend KJSCE Hackathon?  *
           </label>
           <textarea ng-model="user.profile.essay">
           </textarea>
