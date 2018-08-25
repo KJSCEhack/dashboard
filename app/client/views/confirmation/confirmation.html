@@ -11,7 +11,13 @@
         <div class="divided title">Basic Details</div>
 
         <fieldset ng-disabled="pastConfirmation">
-
+          <div class="field" ng-hide="regIsClosed">
+            <button type="submit"
+                    class="fluid ui purple button"
+                    ng-click="submitForm()">
+              Submit
+            </button>
+          </div>
         
 
 

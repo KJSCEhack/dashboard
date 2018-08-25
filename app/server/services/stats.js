@@ -39,7 +39,6 @@ function calculateStats(){
     confirmedOther: 0,
     confirmedNone: 0,
 
-    dietaryRestrictions: {},
 
     hostNeededFri: 0,
     hostNeededSat: 0,
