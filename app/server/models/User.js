@@ -28,7 +28,7 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2016 2017 2018 2019'.split(' '),
+      values: '2019 2020 2021 2022'.split(' '),
     }
   },
 
@@ -51,39 +51,13 @@ var profile = {
       values: 'M F O N'.split(' ')
     }
   },
-
-};
-
-// Only after confirmed
-var confirmation = {
   phoneNumber: String,
-  dietaryRestrictions: [String],
-  shirtSize: {
-    type: String,
-    enum: {
-      values: 'XS S M L XL XXL WXS WS WM WL WXL WXXL'.split(' ')
-    }
-  },
-  wantsHardware: Boolean,
-  hardware: String,
 
   major: String,
   github: String,
   twitter: String,
   website: String,
   resume: String,
-
-  needsReimbursement: Boolean,
-  address: {
-    name: String,
-    line1: String,
-    line2: String,
-    city: String,
-    state: String,
-    zip: String,
-    country: String
-  },
-  receipt: String,
 
   hostNeededFri: Boolean,
   hostNeededSat: Boolean,
@@ -94,8 +68,6 @@ var confirmation = {
 
   notes: String,
 
-  signatureLiability: String,
-  signaturePhotoRelease: String,
   signatureCodeOfConduct: String,
 };
 
@@ -218,7 +190,6 @@ var schema = new mongoose.Schema({
    *
    * Extension of the user model, but can only be edited after acceptance.
    */
-  confirmation: confirmation,
 
   status: status,
 
@@ -333,7 +304,7 @@ schema.statics.validateProfile = function(profile, cb){
     profile.name.length > 0 &&
     profile.adult &&
     profile.school.length > 0 &&
-    ['2016', '2017', '2018', '2019'].indexOf(profile.graduationYear) > -1 &&
+    ['2019', '2020', '2021', '2022'].indexOf(profile.graduationYear) > -1 &&
     ['M', 'F', 'O', 'N'].indexOf(profile.gender) > -1
     ));
 };

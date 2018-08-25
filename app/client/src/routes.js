@@ -75,19 +75,6 @@ angular.module('reg')
           }
         }
       })
-      .state('app.confirmation', {
-        url: "/confirmation",
-        templateUrl: "views/confirmation/confirmation.html",
-        controller: 'ConfirmationCtrl',
-        data: {
-          requireAdmitted: true
-        },
-        resolve: {
-          currentUser: function(UserService){
-            return UserService.getCurrentUser();
-          }
-        }
-      })
       .state('app.team', {
         url: "/team",
         templateUrl: "views/team/team.html",

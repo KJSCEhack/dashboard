@@ -155,7 +155,25 @@ angular.module('reg')
                   prompt: 'You must be an adult, or an MIT student.'
                 }
               ]
-            }
+            },
+            phone: {
+              identifier: 'phone',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a phone number.'
+                }
+              ]
+            },
+            signatureCodeOfConduct: {
+              identifier: 'signatureCodeOfConduct',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please type your digital signature.'
+                }
+              ]
+            },
           }
         });
       }

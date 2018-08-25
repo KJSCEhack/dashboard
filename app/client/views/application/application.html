@@ -27,6 +27,18 @@
                  ng-model="user.profile.name">
         </div>
 
+        <div class="field">
+          <label> What's your phone number? (required) </label>
+          <p>
+            We need this in case we need to get ahold of you!
+          </p>
+          <input type="tel"
+                 name="phone"
+                 ng-model="user.profile.phoneNumber"
+                 placeholder="(+91) - 555 - 1234"
+                 required>
+        </div>
+
         <div class="field" ng-show="autoFilledSchool">
           <label> School </label>
           <input class="ui input"
@@ -51,12 +63,10 @@
             name="year"
             ng-model="user.profile.graduationYear">
             <option value="">Graduation Year</option>
-            <option value="2016">2018</option>
-            <option value="2017">2019</option>
-            <option value="2018">2020</option>
-            <option value="2019">2021</option>
-            <option value="2016">2022</option>
-            <option value="2016">2023</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
           </select>
         </div>
 
@@ -69,7 +79,6 @@
             <option value="M">Male</option>
             <option value="F">Female</option>
             <option value="O">Other</option>
-            <option value="N">I prefer not to answer.</option>
           </select>
         </div>
 
@@ -79,20 +88,74 @@
                  placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
                  ng-model="user.profile.description">
         </div>
+        <div class="divided title"> Skills & Accomplishments </div>
 
         <div class="field">
+          <label> What are you studying? </label>
+          <input type="text"
+                 name="study"
+                 placeholder="Computer Science, Electronics , etc."
+                 ng-model="user.profile.major">
+        </div>
+
+        <div class="field">
+          <label> Github </label>
+          <input type="text"
+                 name="github"
+                 placeholder="https://github.com/foobar"
+                 ng-model="user.profile.github">
+        </div>
+
+        <div class="field">
+          <label> Twitter </label>
+          <input type="text"
+                 name="twitter"
+                 placeholder="https://twitter.com/foobar"
+                 ng-model="user.profile.twitter">
+        </div>
+
+        <div class="field">
+          <label> Skill Sheet (required) </label>
+          <p>
+            Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
+          </p>
+          <input type="text"
+                 name="twitter"
+                 placeholder="Google Drive Link"
+                 ng-model="user.profile.resume">
+        </div>
+
+        <br>
+        <br>
+
+        <div class="divided title">everything else</div>
+        
+        <div class="field">
           <label>
-              What would you like to learn or get out of Hack KJSCE 2018? (optional)
+              What would you like to learn or get out of KJSCE Hackathon 2018? (optional)
           </label>
           <textarea ng-model="user.profile.essay">
           </textarea>
         </div>
 
+        <div class="field">
+          <label>
+            Additional Notes
+          </label>
+          <p>
+            If there's anything else you need to let us know, tell us here!
+          </p>
+          <textarea
+            ng-model="user.profile.notes"></textarea>
+        </div>
+
+        
+
         <div class="field"
              ng-hide="isMitStudent">
           <p>
             Because of limitations imposed by KJSCE, we are not legally allowed to host
-            minors (those under 18) for Hack KJSCE 2018. Checking the box below affirms that you are or will be 18 years or older on day.
+            minors (those under 18) for KJSCE Hackathon 2018. Checking the box below affirms that you are or will be 18 years or older on day.
           </p>
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">

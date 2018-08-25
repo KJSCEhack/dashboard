@@ -75,51 +75,8 @@ angular.module('reg')
         // Semantic-UI form validation
         $('.ui.form').form({
           fields: {
-            shirt: {
-              identifier: 'shirt',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please give us a shirt size!'
-                }
-              ]
-            },
-            phone: {
-              identifier: 'phone',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please enter a phone number.'
-                }
-              ]
-            },
-            signatureLiability: {
-              identifier: 'signatureLiabilityWaiver',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
-                }
-              ]
-            },
-            signaturePhotoRelease: {
-              identifier: 'signaturePhotoRelease',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
-                }
-              ]
-            },
-            signatureCodeOfConduct: {
-              identifier: 'signatureCodeOfConduct',
-              rules: [
-                {
-                  type: 'empty',
-                  prompt: 'Please type your digital signature.'
-                }
-              ]
-            },
+            
+
           }
         });
       }
