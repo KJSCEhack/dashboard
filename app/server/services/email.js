@@ -7,7 +7,7 @@ const emailTemplates = require('email-templates');
 
 var ROOT_URL = process.env.ROOT_URL;
 
-var HACKATHON_NAME = process.env.HACKATHON_NAME;
+var HACKATHON_NAME = "KJSCE Hackathon 2018";
 var EMAIL_ADDRESS = process.env.EMAIL_ADDRESS;
 var TWITTER_HANDLE = process.env.TWITTER_HANDLE;
 var FACEBOOK_HANDLE = process.env.FACEBOOK_HANDLE;
@@ -84,7 +84,7 @@ controller.sendVerificationEmail = function(email, token, callback) {
 
   var options = {
     to: email,
-    subject: "["+HACKATHON_NAME+"] - Verify your email"
+    subject: "[ "+HACKATHON_NAME+" ] - Verify your email"
   };
 
   var locals = {
